@@ -23,9 +23,6 @@ function fetchCountriesData() {
             }
         })
         fillAllCountries(countries);
-        // console.log(data);
-        // console.log(countries[0]);
-        // console.log(countries);
     })
 }
 

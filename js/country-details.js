@@ -73,9 +73,11 @@ function fillCountryDetails(currentCountry) {
 function fillBorderCountries(borderCountries) {
     const borderCountriesContainer = document.querySelector('.country-details__border-box');
 
+    if (!borderCountries) return;
+
     borderCountries.forEach(country => {
         const newBorderCountry = document.createElement('a');
-        
+
         newBorderCountry.classList.add('country-details__border-text');
         newBorderCountry.setAttribute('href', `country-details.html?country=${country}`);
         newBorderCountry.textContent = country;
