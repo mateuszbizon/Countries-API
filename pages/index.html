@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/047849f5b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <h2 class="header__logo">Where in the world?</h2>
+        <button class="header__btn"><i class="fa-regular fa-moon"></i> Dark Mode</button>
+    </header>
+
+    <div class="filters">
+        <div class="filters__input-box">
+            <i class="filters__input-search-icon fa-solid fa-magnifying-glass"></i>
+            <input id="input-filter" type="text" class="filters__input" placeholder="Search for country...">
+        </div>
+        <select id="select-filter" class="filters__select">
+            <option value="0" disabled selected hidden>Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </div>
+
+    <main class="main"></main>
+
+    <script src="../js/index.js"></script>
+</body>
+</html>

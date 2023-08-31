@@ -1,0 +1,49 @@
+@use './pages';
+@use './abstract/colors' as *;
+@use './abstract/mixins' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: $secondary-background-color;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $main-background-color;
+    color: $main-color;
+    padding: 20px 15px;
+    margin-bottom: 50px;
+
+    &__logo {
+        font-size: 1.5rem;
+    }
+
+    &__btn {
+        @include btn;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 20px 50px;
+
+        &__logo {
+            font-size: 2rem;
+        }
+    }
+}

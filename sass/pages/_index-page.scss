@@ -1,0 +1,119 @@
+@use '../abstract/colors' as *;
+@use '../abstract/mixins' as *;
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 0 15px;
+
+    &__input-box {
+        position: relative;
+        font-size: 1.4em;
+        color: $input-color;
+    }
+
+    &__input-search-icon {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translate(-50%, -50%)
+    }
+
+    &__input {
+        @include main-input-styling;
+        padding: 15px 30px 15px 50px;
+        width: 100%;
+        color: $input-color;
+    }
+
+    &__select {
+        @include main-input-styling;
+        padding: 15px 25px;
+        width: 60%;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    &__country {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+
+    &__country-img {
+        width: 100%;
+        height: 200px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    &__country-body {
+        background-color: $main-background-color;
+        color: $main-color;
+        padding: 20px 20px 40px;
+        font-size: 1.5rem;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    &__country-name {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    &__country-text-side {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__country-text-title {
+        font-weight: 600;
+    }
+
+    &__country-text {
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 576px) {
+    .filters {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__input-box {
+            width: clamp(250px, 50vw, 600px);
+        }
+
+        &__select {
+            width: 250px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .filters {
+        padding: 0 50px;
+    }
+
+    .main {
+        padding: 0 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}

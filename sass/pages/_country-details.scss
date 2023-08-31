@@ -1,0 +1,159 @@
+@use '../abstract/colors' as *;
+@use '../abstract/mixins' as *;
+
+.back-btn-side {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 50px;
+
+    &__btn {
+        @include btn;
+        padding: 10px 20px;
+        box-shadow: 0 0 3px $main-color;
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+}
+
+.country-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 0 20px;
+
+    &__img-side, &__text-side {
+        width: 300px;
+    }
+
+    &__img-side {
+        height: 200px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__country-name {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    &__main-text {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__main-text-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.5rem;
+    }
+
+    &__text-title {
+        font-weight: 600;
+    }
+
+    &__text {
+        font-weight: normal;
+    }
+
+    &__border {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    &__border-title {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    &__border-box {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__border-text {
+        @include btn;
+        padding: 5px 20px;
+        box-shadow: 0 0 3px $main-color;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .country-details {
+        &__img-side, &__text-side {
+            width: 400px;
+        }
+
+        &__img-side {
+            height: 250px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .back-btn-side {
+        padding: 0 50px;
+    }
+
+    .country-details {
+        &__img-side, &__text-side {
+            width: 600px;
+        }
+
+        &__img-side {
+            height: 350px;
+        }
+
+        &__main-text {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__main-text-box {
+            width: max-content;
+            max-width: 50%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .country-details {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0 50px;
+
+        &__img-side, &__text-side {
+            width: 650px;
+        }
+
+        &__country-name {
+            font-size: 2.5rem;
+        }
+
+        &__main-text-box {
+            font-size: 1.8rem;
+        }
+
+        &__border {
+            flex-direction: row;
+            gap: 15px;
+            margin-top: 60px;
+        }
+
+        &__border-title {
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+    }
+}

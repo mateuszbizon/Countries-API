@@ -1,0 +1,23 @@
+@use './colors' as *;
+
+@mixin main-input-styling {
+    background-color: $main-background-color;
+    color: $main-color;
+    border-radius: 5px;
+    border: none;
+}
+
+@mixin btn {
+    background-color: $main-background-color;
+    color: $main-color;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+
+    &:hover {
+        background-color: $dark-main-background-color;
+        color: $dark-main-color;
+    }
+}
